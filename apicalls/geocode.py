@@ -8,7 +8,7 @@ arcgis_clientid = "XtOL7IWHA13SPXZI"
 arcgis_client_secret = "05968d4dece94858a4e2b1e6b3b70f84"
 arcgis_auth = "https://www.arcgis.com/sharing/oauth2/token?client_id={0}&grant_type=client_credentials&client_secret={1}&f=pjson"
 arcgis_geo = "http://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?singleLine={0}&forStorage=true&token={1}&f=pjson"
-census_api_string = """https://geocoding.geo.census.gov/geocoder/locations/address?street={0}&city={1}&state={2}&zip={3}&benchmark=9&format=json"""
+census_api_string = """https://geocoding.geo.census.gov/geocoder/locations/address?street={0}&city={1}&state={2}&zip={3}&benchmark=Public_AR_Current&format=json"""
 
 
 async def AssyncGeo(recs):
