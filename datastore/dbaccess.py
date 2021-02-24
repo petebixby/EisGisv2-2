@@ -1,13 +1,16 @@
 import psycopg2
-from config import db_config
+from dbconfig import db_config
 import models
 import csv
+import os
 
 class dbConn():
     
     def getcon(self, connname=None):
         if connname == None:
             connname = 'default'
+
+        db_config.DATABASES[connname]["password"] = os.environ.get("dbpassword")
         
         conn = psycopg2.connect(**db_config.DATABASES[connname])
         
